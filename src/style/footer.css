@@ -4,15 +4,8 @@
     --grey: #838383;
     --black: #000000;
     --matt-black: #171717;
-    --red: #ff4654;
-    --dark-green: #033F2D;
-    --light-green: #C1E965;
-    --dirty-green: #E9EAE1;
-    --background-color: #ffffff;
-    --primary-color: #E9EAE1;
-    --primary-dark: #033F2D;
-    /* --primary-light: #E9EAE1; */
-    --secondary-color: #ffffff;
+    --blue: #84c9ef;
+    --green: #606c5d;
 }
 
 /* Footer Section */
@@ -20,7 +13,7 @@
     width: 95%;
     margin: 30px auto;
     padding: 70px 40px 10px 40px;
-    background-color: var(--dirty-green);
+    background-color: var(--black);
     border-radius: 20px;
 }
 
@@ -39,7 +32,7 @@
 
 .foot-section > li > div {
     margin: 20px 0;
-    color: var(--black);
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -52,6 +45,17 @@
 
 .footer-logo {
     width: 200px;
+}
+
+.social-media-icons {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.sm-icon {
+    width: 30px;
 }
 
 hr {
@@ -67,26 +71,20 @@ hr {
     padding: 20px;
     width: 90%;
     margin: auto auto;
-    color: var(--black);
+    color: var(--white);
 }
 
 .below-footer-links > li > div {
-    color: var(--black);
+    color: var(--white);
     font-size: 16px;
     font-weight: 600;
     padding: 0px;
     cursor: pointer;
 }
 
-.below-footer-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
 .below-footer-section div {
     font-size: 18px;
-    color: var(--black);
+    color: var(--white);
     align-items: center;
     margin: 10px;
     cursor: pointer;
@@ -95,6 +93,7 @@ hr {
 .privacy-policy {
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .privacy-policy li div {
@@ -113,13 +112,32 @@ hr {
     }
 }
 
-@media (max-width: 600px) {
-    .foot-section {
-        padding-left: 0px;
+@media (max-width: 800px) {
+    .footer-sections {
+        justify-content: left;
+    }
+
+    .below-footer-links {
+        width: 100%;
+    }
+
+    .below-footer-section {
+        flex-direction: column;
     }
 }
 
-.green-text {
-    color: var(--dark-green);
-    font-weight: 600;
+@media (max-width: 600px) {
+    .footer {
+        width: 95%;
+        margin: 30px auto;
+        padding: 10px 20px;
+    }
+
+    .below-footer-links {
+        padding: 10px 0px;
+    }
+        
+    .foot-section {
+        padding-left: 0px;
+    }
 }
