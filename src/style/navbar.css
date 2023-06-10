@@ -4,15 +4,8 @@
     --grey: #838383;
     --black: #000000;
     --matt-black: #171717;
-    --red: #ff4654;
-    --dark-green: #033F2D;
-    --light-green: #C1E965;
-    --dirty-green: #E9EAE1;
-    --background-color: #ffffff;
-    --primary-color: #E9EAE1;
-    --primary-dark: #033F2D;
-    /* --primary-light: #E9EAE1; */
-    --secondary-color: #ffffff;
+    --blue: #84c9ef;
+    --green: #606c5d;
 }
 
 .notice-line {
@@ -41,7 +34,7 @@ nav {
     margin: 10px auto;
     padding: 20px;
     opacity: 0.9;
-    background-color: var(--primary-dark);
+    background-color: var(--green);
     border-radius: 20px;
 }
 
@@ -51,7 +44,7 @@ nav {
 }
 
 .logo {
-    height: 100px;
+    height: 60px;
 }
 
 .white {
@@ -67,12 +60,14 @@ nav {
     justify-content: center;
     text-align: center;
     align-items: center;
+    transition-duration: 500ms;
+    margin-left: 20px;
 }
 
 .nav-links li {
     display: block;
-    padding: 0 15px;
-    color: var(--black);
+    padding: 0 10px;
+    color: var(--white);
     transition-duration: 200ms;
 }
 
@@ -80,17 +75,12 @@ nav {
     transform: scale(1.1);
 }
 
-.nav-links li p {
-    padding: 20px 10px;
-    color: var(--black);
-    font-weight: 600;
-    font-size: 18px;
+.nav-links li p, .nav-links li div {
+    padding: 20px 0px;
+    color: var(--white);
+    font-size: 16px;
     transition: 200ms;
     cursor: pointer;
-}
-
-.nav-links li div {
-    font-weight: 600;
 }
 
 .nav-buttons {
@@ -102,12 +92,13 @@ nav {
 }
 
 .nav-buttons li div {
-    color: var(--black);
+    color: var(--white);
     cursor: pointer;
+    font-weight: 600;
 }
 
-.sign-in {
-    border: 1px solid var(--black);
+.nav-button {
+    border: 1px solid var(--white);
     border-radius: 8px;
     padding: 8px;
 }
@@ -119,7 +110,7 @@ nav {
     background-color: var(--white);
     text-align: left;
     min-width: 250px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 6px 12px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     margin: 0 10px;
     border-radius: 8px;
@@ -127,22 +118,11 @@ nav {
 
 .dropdown-content div, .dropdown-content a {
     color: var(--black);
+    font-weight: 600;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     cursor: pointer;
-}
-
-.nav-links li div , .nav-links div {
-    cursor: pointer;
-}
-
-.dropdown-content div:hover {
-    color: var(--hover-blue);
-}
-
-.dropdown-content a:hover {
-    color: var(--hover-blue);
 }
 
 .dropdown:hover .dropdown-content {
@@ -176,7 +156,7 @@ a hr {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     nav {
         margin: 0 0;
         padding: 20px 30px;
@@ -192,7 +172,7 @@ a hr {
     .nav-links {
         position: absolute;
         z-index: 3;
-        background-color: var(--dirty-green);
+        background-color: var(--blue);
         margin: 0 0;
         display: block;
         top: 150px;
@@ -203,7 +183,7 @@ a hr {
         transform: 200ms;
         overflow: hidden;
         border-radius: 20px;
-        transition-duration: 200ms;
+        
     }
 
     .nav-links.active {
