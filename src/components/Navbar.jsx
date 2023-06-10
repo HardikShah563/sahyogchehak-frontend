@@ -5,10 +5,23 @@ import { useNavigate } from 'react-router-dom';
 import navLinks from "../data/navbar";
 
 export default function Navbar() {
+    // setting admin state
+    let [admin, setAdmin] = React.useState(true);
+
+    let addItem = `
+        <div className="dropdown add-item">
+            <li>
+                <div onClick={() => navigate("/add-list-item")}>+ Add Item</div>
+            </li>
+            <div className="dropdown-content">
+            </div>
+        </div>
+    `;
+
+    let nonAdminStatement = "";
+
     const navigate = useNavigate();
-
     let iterate = 0;
-
     const showNavBar = () => {
         document.querySelector(".nav-links").classList.toggle("active");
     }
@@ -97,6 +110,7 @@ export default function Navbar() {
                                     <div onClick={() => navigate("/our-team")}>Our Team</div>
                                     <div onClick={() => navigate("/our-partners-and-supporters")}>Our Partners and Supporters</div>
                                     <div onClick={() => navigate("/stories-of-change")}>Stories of Change</div>
+                                    {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
                                 </div>
                             </div>
 
@@ -109,7 +123,8 @@ export default function Navbar() {
                                     <div onClick={() => navigate("/sahyog-roshan")}>Sahyog Roshan</div>
                                     <div onClick={() => navigate("/sahyog-scholarship-and-mentorship-program")}>Sahyog Scholarship Mentorship Program</div>
                                     <div onClick={() => navigate("/sahyog-jhula")}>Sahyog Jhula</div>
-                    
+                                    <div onClick={() => navigate("/add-element")}>Sahyog Jhula</div>
+                                    {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
                                 </div>
                             </div>
 
@@ -120,20 +135,45 @@ export default function Navbar() {
                                 <div className="dropdown-content">
                                     <div onClick={() => navigate("/reports")}>Annual Reports</div>
                                     <div onClick={() => navigate("/financials")}>Financials</div>
+                                    {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
+                                </div>
+                            </div>
+                            
+                            <div className="dropdown">
+                                <li>
+                                    <div onClick={() => navigate("/sangarsh-campaign")}>Sangarsh Campaign</div>
+                                </li>
+                                <div className="dropdown-content">
+                                    {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
                                 </div>
                             </div>
 
-                            <li>
-                                <div onClick={() => navigate("/sangarsh-campaign")}>Sangarsh Campaign</div>
-                            </li>
+                            <div className="dropdown">
+                                <li>
+                                    <div onClick={() => navigate("/covid-19-relief")}>Covid-19 Relief</div>
+                                </li>
+                                <div className="dropdown-content">
+                                    {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
+                                </div>
+                            </div>
 
-                            <li>
-                                <div onClick={() => navigate("/covid-19-relief")}>Covid-19 Relief</div>
-                            </li>
+                            <div className="dropdown">
+                                <li>
+                                    <div onClick={() => navigate("/donate")}>Donate Now</div>
+                                </li>
+                                <div className="dropdown-content">
+                                    {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
+                                </div>
+                            </div>
 
-                            <li>
-                                <div onClick={() => navigate("/donate")}>Donate Now</div>
-                            </li>
+                            {admin ? 
+                                <div className="dropdown add-item">
+                                    <li>
+                                        <div onClick={() => navigate("/add-list-item")}>+ Add Item</div>
+                                    </li>
+                                    <div className="dropdown-content">
+                                    </div>
+                                </div> : ""}
                         </div>
                     </div>
 
@@ -143,6 +183,11 @@ export default function Navbar() {
                                 Login
                             </div>
                         </li>
+                        {/* <li className="nav-button" onClick={() => navigate("/admin-dashboard")}>
+                            <div>
+                                Admin
+                            </div>
+                        </li> */}
                     </div>
                     <div className="nav-lines" onClick={showNavBar}>
                         <div className='Bar'></div>
