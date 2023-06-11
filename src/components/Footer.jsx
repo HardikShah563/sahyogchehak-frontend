@@ -1,8 +1,8 @@
 // importing res
 import logo from "../res/logo-sahyog-small.png";
-import insta from "../res/insta.png";
-import fb from "../res/facebook.png";
-import twitter from "../res/twitter.png";
+import insta from "../res/icon-insta.png";
+import fb from "../res/icon-facebook.png";
+import twitter from "../res/icon-twitter.png";
 
 import '../style/footer.css';
 import { useNavigate } from 'react-router-dom';
@@ -29,7 +29,7 @@ export default function Footer() {
             <div 
                 className="foot-section">
                 <li className="heading">
-                    About
+                    <span className="yellow-text">About</span>
                 </li>
                 <li>
                     <div onClick={() => navigate("/vision-and-mission")}>Our Values and Mission</div>
@@ -59,7 +59,7 @@ export default function Footer() {
 
             <div className="foot-section">
                 <li className="heading">
-                    Programs
+                    <span className="yellow-text">Programs</span>
                 </li>
                 <li>
                     <div onClick={() => navigate("/sahyog-sangharsh")}>Sahyog Sangharsh</div>
@@ -80,7 +80,7 @@ export default function Footer() {
 
             <div className="foot-section">
                 <li className="heading">
-                    Reports
+                    <span className="yellow-text">Reports</span>
                 </li>
                 <li>
                     <div onClick={() => navigate("/reports")}>Annual Reports</div>
@@ -91,7 +91,9 @@ export default function Footer() {
             </div>
 
             <div className="foot-section">
-                <li className="heading"><span>Other</span></li>
+                <li className="heading">
+                    <span className="yellow-text">Other</span>
+                </li>
                 <li>
                     <div onClick={() => navigate("/sangarsh-campaign")}>Sangarsh Campaign</div>
                 </li>

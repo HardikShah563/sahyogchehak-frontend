@@ -6,13 +6,14 @@
     --matt-black: #171717;
     --blue: #84c9ef;
     --green: #606c5d;
+    --yellow: #FEC443;
 }
 
 /* Footer Section */
 .footer {
     width: 95%;
     margin: 30px auto;
-    padding: 70px 40px 10px 40px;
+    padding: 40px 10px 10px 10px;
     background-color: var(--black);
     border-radius: 20px;
 }
@@ -140,4 +141,8 @@ hr {
     .foot-section {
         padding-left: 0px;
     }
+}
+
+.yellow-text {
+    color: var(--yellow);
 }

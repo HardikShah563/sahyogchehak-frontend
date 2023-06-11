@@ -1,3 +1,4 @@
+/* Variable CSS */
 :root {
     --white: #ffffff;
     --off-white: #f1f1f1;
@@ -74,7 +75,8 @@ nav {
     transform: scale(1.1);
 }
 
-.nav-links li p, .nav-links li div {
+.nav-links li p,
+.nav-links li div {
     padding: 20px 0px;
     color: var(--white);
     font-size: 16px;
@@ -109,13 +111,14 @@ nav {
     background-color: var(--white);
     text-align: left;
     min-width: 250px;
-    box-shadow: 6px 12px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 6px 12px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     margin: 0 10px;
     border-radius: 8px;
 }
 
-.dropdown-content div, .dropdown-content a {
+.dropdown-content div,
+.dropdown-content a {
     color: var(--black);
     font-weight: 600;
     padding: 12px 16px;
@@ -159,7 +162,9 @@ a hr {
 }
 
 @media (max-width: 1100px) {
-    .nav-links li p, .nav-links li div {
+
+    .nav-links li p,
+    .nav-links li div {
         font-size: 12px;
         font-weight: 400;
     }
@@ -192,7 +197,7 @@ a hr {
         transform: 200ms;
         overflow: hidden;
         border-radius: 20px;
-        
+
     }
 
     .nav-links.active {
