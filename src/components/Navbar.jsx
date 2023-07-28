@@ -1,6 +1,7 @@
 import React from 'react';
 import smallLogo from "../res/logo-sahyog-small.png";
 import '../style/navbar.css';
+import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import navLinks from "../data/navbar";
 

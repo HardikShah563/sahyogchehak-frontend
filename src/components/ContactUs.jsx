@@ -11,7 +11,6 @@ export default function ContactUs() {
     return (
         <>
             <div className="contact-section">
-                <h1 className="contact-heading">Contact Us</h1>
                 <div className="contact-flex">
                     <div className="contact-div">
                         <div className="contact-sub-div">
@@ -39,6 +38,7 @@ export default function ContactUs() {
                     
                     <div className="contact-div">
                         <form className="form" action="?" method="post">
+                            <h1>Email Us: </h1>
                             <div className="input-div">
                                 <p className="input-label">Enter your Name</p>
                                 <input
