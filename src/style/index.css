@@ -48,6 +48,26 @@ body {
     background-color: var(--white);
 }
 
+.flex {
+    display: flex;
+}
+
+.title {
+    font-size: 48px;
+}
+
+.sub-title {
+    font-size: 36px;
+}
+
+.sub-sub-title {
+    font-size: 24px;
+}
+
+.txt-ctr {
+    text-align: center;
+}
+
 /* -------- ScrollBar CSS -------- */
 /* width */
 ::-webkit-scrollbar {

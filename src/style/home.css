@@ -1,0 +1,22 @@
+.join-us {
+    width: 60vw;
+    margin: auto auto;
+    justify-content: space-between;
+}
+
+.join-div {
+    width: 250px;
+    height: 250px;
+}
+
+.join-icon {
+    width: 200px;
+    height: 200px;
+    margin: auto auto;
+}
+
+.join-icon img {
+    width: 100%;
+    height: fit-content;
+    margin: auto auto;
+}
