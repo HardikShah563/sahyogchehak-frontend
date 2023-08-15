@@ -105,11 +105,15 @@ button:hover {
 @media (max-width: 800px) {
     .contact-sub-div {
         justify-content: center;
-        width: 100%;
     }
     
     .contact-flex {
         flex-wrap: wrap-reverse;
+        display: block;
+    }
+
+    .contact-div .form {
+        margin-block: 40px;
     }
 }
 
