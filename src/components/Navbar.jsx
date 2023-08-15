@@ -34,8 +34,8 @@ export default function Navbar() {
         let dropdownNames = [];
         let dropdownLinks = [];
         navLinksArray.map((link) => {
-            if(link[0][0] == i){
-                if(link[0][1] == "0" && link[0][2] == "0") {
+            if (link[0][0] == i) {
+                if (link[0][1] == "0" && link[0][2] == "0") {
                     dropdownNames.push(link[1]);
                 }
                 else {
@@ -54,9 +54,9 @@ export default function Navbar() {
             </li>
             <div className="dropdown-content">
                 ${dropdownNames.map((name) => {
-                    formLink(dropdownLinks[iterate], name);
-                    iterate += 1;
-                })}
+            formLink(dropdownLinks[iterate], name);
+            iterate += 1;
+        })}
             </div>
         </div>
         `
@@ -75,12 +75,6 @@ export default function Navbar() {
                     <div className="nav-items">
                         <img src={smallLogo} className="logo"></img>
                         <div className="nav-links">
-
-                            {/* {navLinks.map((ele) => {
-                                ele.id[1] == "0" & ele.id[2] == "0"? dropdownTemplate[0] : "";
-                            })}
-                            */}
-
                             <li>
                                 <div onClick={() => navigate("/")}>Home</div>
                             </li>
@@ -126,7 +120,7 @@ export default function Navbar() {
                                     {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
                                 </div>
                             </div>
-                            
+
                             <div className="dropdown">
                                 <li>
                                     <div onClick={() => navigate("/sangarsh-campaign")}>Sangarsh Campaign</div>
@@ -154,6 +148,14 @@ export default function Navbar() {
                                 </div>
                             </div>
 
+                            <div className="dropdown login-hide">
+                                <li className="nav-button" onClick={() => navigate("/login")}>
+                                    <div>
+                                        Login
+                                    </div>
+                                </li>
+                            </div>
+
                             {/* {admin ? 
                                 <div className="dropdown add-item add-nav-item">
                                     <li>
@@ -165,7 +167,7 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <div className="nav-buttons">
+                    <div className="nav-buttons login-display">
                         <li className="nav-button" onClick={() => navigate("/login")}>
                             <div>
                                 Login
@@ -177,7 +179,7 @@ export default function Navbar() {
                                 Admin Dashboard
                             </div>
                         </li> : ""} */}
-                        
+
                     </div>
                     <div className="nav-lines" onClick={showNavBar}>
                         <div className='Bar'></div>
