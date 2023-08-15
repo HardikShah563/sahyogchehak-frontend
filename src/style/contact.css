@@ -8,7 +8,6 @@
     margin: auto auto;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap-reverse;
 }
 
 /* Contact Info */
@@ -36,7 +35,7 @@
 }
 
 .sub-div-info {
-    width: 400px;
+    width: 70%;
     margin: auto 0px auto 20px;
 }
 
@@ -78,7 +77,7 @@ textarea {
 }
 
 textarea {
-    height: 150px;
+    height: 200px;
     resize: none;
 }
 
@@ -103,9 +102,27 @@ button:hover {
     margin-bottom: 15px;
 }
 
+@media (max-width: 800px) {
+    .contact-sub-div {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .contact-flex {
+        flex-wrap: wrap-reverse;
+    }
+}
+
 @media (max-width: 600px) {
+    .contact-sub-div {
+        display: block;
+        width: 90vw;
+        margin: 40px auto 0px auto;
+    }
+
     .sub-div-info {
-        width: auto;
+        margin: 0px;
+        width: 100%;
     }
     
     .sub-div-img {

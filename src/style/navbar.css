@@ -9,7 +9,7 @@
     --green: #606c5d;
 }
 
-.notice-line {
+/* .notice-line {
     width: 95%;
     padding-block: 10px;
     background-color: var(--dark-green);
@@ -18,7 +18,7 @@
     color: var(--white);
     align-items: center;
     text-align: center;
-}
+} */
 
 /* ========== ========= Navbar CSS ======== ======== */
 
@@ -201,24 +201,53 @@ a hr {
         transform: 200ms;
         overflow: hidden;
         border-radius: 20px;
-
     }
 
     .nav-links.active {
         height: fit-content;
         padding: 20px;
+        overflow: scroll;
     }
 
     .nav-links li {
         justify-content: center;
-        /* padding: 20px 0; */
         text-align: left;
         font-weight: 600;
+        padding-inline: 0px;
+        margin-inline: 20px;
     }
 
+
+    .nav-links li p,
     .nav-links li div {
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: 400;
         padding: 20px 0px;
+    }
+
+    .nav-links li:hover {
+        transform: scale(1);
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        transform: translateX(0);
+        background-color: transparent;
+        box-shadow: none;
+        text-align: left;
+        min-width: 250px;
+        border-left: 1px solid var(--white);
+        border-radius: 0px;
+        margin-left: 20px;
+    }
+
+    .dropdown-block {
+        display: block;
+    }
+
+    .dropdown-content div {
+        color: var(--white);
     }
 }
 

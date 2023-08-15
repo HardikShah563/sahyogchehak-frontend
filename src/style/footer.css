@@ -20,6 +20,7 @@
 
 .footer-sections {
     display: flex;
+    gap: 20px;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 90%;
@@ -83,6 +84,11 @@ hr {
     cursor: pointer;
 }
 
+.below-footer-links {
+
+    align-items: center;
+}
+
 .below-footer-section div {
     font-size: 18px;
     color: var(--white);
@@ -122,8 +128,10 @@ hr {
         width: 100%;
     }
 
-    .below-footer-section {
+    .below-footer-links {
         flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 }
 
