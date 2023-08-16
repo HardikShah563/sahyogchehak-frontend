@@ -7,66 +7,12 @@ import navLinks from "../data/navbar";
 
 export default function Navbar() {
     // setting admin state
-    let [admin, setAdmin] = React.useState(false);
+    let [admin, setAdmin] = React.useState(true);
 
     const navigate = useNavigate();
     let iterate = 0;
     const showNavBar = () => {
         document.querySelector(".nav-links").classList.toggle("active");
-    }
-
-    const dropdownTemplate = [
-        `
-        <div className="dropdown">
-            <li>
-                {ele.name}
-            </li>
-            <div className="dropdown-content">
-        `, `
-                <div onClick={() => navigate("/about-jalaram-bappa")}>About Jalaram Bappa</div>
-                <div onClick={() => navigate("/about-temple")}>About Temple</div>
-            </div>
-        </div>
-    `];
-
-    function getNavLinks(i) {
-        // console.log(navLinks[0]);
-        let navLinksArray = navLinks[0];
-        let dropdownNames = [];
-        let dropdownLinks = [];
-        navLinksArray.map((link) => {
-            if (link[0][0] == i) {
-                if (link[0][1] == "0" && link[0][2] == "0") {
-                    dropdownNames.push(link[1]);
-                }
-                else {
-                    dropdownLinks.push(link[2]);
-                    dropdownNames.push(link[1]);
-                }
-            }
-        });
-        console.log(dropdownNames.slice(1));
-        console.log(dropdownLinks);
-        return `
-        <div className="dropdown">
-            <li>
-                <p>${dropdownNames[0]}</p>
-                {dropdownNames.slice(1)}
-            </li>
-            <div className="dropdown-content">
-                ${dropdownNames.map((name) => {
-            formLink(dropdownLinks[iterate], name);
-            iterate += 1;
-        })}
-            </div>
-        </div>
-        `
-        // console.log(template);
-    }
-
-    function formLink(link, name) {
-        let formlink = `<div onClick={() => navigate(${link})}>${name}</div>`;
-        return formlink;
     }
 
     return (
@@ -76,10 +22,6 @@ export default function Navbar() {
                     <div className="nav-items">
                         <img src={smallLogo} className="logo"></img>
                         <div className="nav-links">
-                            <li>
-                                <div onClick={() => navigate("/")}>Home</div>
-                            </li>
-
                             <div className="dropdown">
                                 <li>
                                     <p href="#main">About</p>
@@ -133,15 +75,6 @@ export default function Navbar() {
 
                             <div className="dropdown">
                                 <li>
-                                    <div onClick={() => navigate("/covid-19-relief")}>Covid-19 Relief</div>
-                                </li>
-                                <div className="dropdown-content">
-                                    {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
-                                </div>
-                            </div>
-
-                            <div className="dropdown">
-                                <li>
                                     <div onClick={() => navigate("/donate")}>Donate Now</div>
                                 </li>
                                 <div className="dropdown-content">
@@ -157,14 +90,14 @@ export default function Navbar() {
                                 </li>
                             </div>
 
-                            {/* {admin ? 
+                            {admin ? 
                                 <div className="dropdown add-item add-nav-item">
                                     <li>
                                         <div onClick={() => navigate("/add-list-item")}>+ Add Item</div>
                                     </li>
                                     <div className="dropdown-content">
                                     </div>
-                                </div> : ""} */}
+                                </div> : ""}
                         </div>
                     </div>
 

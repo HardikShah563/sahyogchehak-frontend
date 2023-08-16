@@ -9,29 +9,18 @@
     --green: #606c5d;
 }
 
-/* .notice-line {
-    width: 95%;
-    padding-block: 10px;
-    background-color: var(--dark-green);
-    border-radius: 8px;
-    margin: 10px auto;
-    color: var(--white);
-    align-items: center;
-    text-align: center;
-} */
-
 /* ========== ========= Navbar CSS ======== ======== */
 
 /* ---- navigation bar css ---- */
 .nav {
     position: sticky;
-    top: 0;
+    top: 10px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 95vw;
     margin: 10px auto;
     padding: 20px;
     background-color: var(--black);
@@ -104,6 +93,14 @@ nav {
     padding: 8px;
 }
 
+.dropdown .nav-button {
+    border: none;
+}
+
+.dropdown .nav-button div {
+    font-weight: 600;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -154,7 +151,12 @@ a hr {
 .add-item {
     border: 1px dashed var(--black);
     border-radius: 8px;
-    margin: 5px;
+    padding: 0px;
+    margin-inline: 5px;
+}
+
+.add-item div {
+    padding: 10px 0px !important;
 }
 
 .add-nav-item {
@@ -163,15 +165,6 @@ a hr {
 
 .login-hide {
     display: none;
-}
-
-@media (max-width: 1100px) {
-
-    .nav-links li p,
-    .nav-links li div {
-        font-size: 12px;
-        font-weight: 400;
-    }
 }
 
 @media (max-width: 900px) {
@@ -249,20 +242,12 @@ a hr {
     .dropdown-content div {
         color: var(--white);
     }
-}
 
-@media (max-width: 600px) {
     .login-hide {
         display: block;
     }
 
     .login-display {
-        display: none;
-    }
-}
-
-@media (max-width: 400px) {
-    .nav-buttons .sign-in {
         display: none;
     }
 }

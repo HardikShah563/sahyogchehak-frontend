@@ -2,6 +2,7 @@
 :root {
     --white: #ffffff;
     --off-white: #f1f1f1;
+    --light-grey: #ebebeb;
     --grey: #838383;
     --black: #000000;
     --mild-grey: #404040;
@@ -10,6 +11,10 @@
     --blue: #84c9ef;
     --green: #606c5d;
     --yellow: #FEC443;
+
+    /* other variables */
+    --radius: 20px;
+    --small-radius: 10px;
 }
 
 /* -------- Reset all web parameters -------- */
@@ -18,7 +23,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    user-select: none;
     scroll-behavior: smooth;
 }
 
@@ -36,6 +40,7 @@ input,
 button,
 .icon {
     display: block;
+    user-select: none;
 }
 
 html {
@@ -54,18 +59,54 @@ body {
 
 .title {
     font-size: 48px;
+    margin-bottom: 40px;
+    letter-spacing: -2px;
+    width: 95%;
+    margin: auto auto;
 }
 
 .sub-title {
     font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
 .sub-sub-title {
     font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.paragraph {
+    font-size: 18px;
 }
 
 .txt-ctr {
     text-align: center;
+}
+
+.txt-jstf {
+    text-align: justify;
+}
+
+.section {
+    margin-block: 100px;
+}
+
+@media (max-width: 850px) {
+    .title {
+        font-size: 36px;
+        margin-block: 30px;
+    }
+
+    .sub-title {
+        font-size: 24px;
+        margin-block: 20px;
+    }
+
+    .sub-sub-title {
+        font-size: 18px;
+        margin-block: 10px;
+    }
 }
 
 /* -------- ScrollBar CSS -------- */

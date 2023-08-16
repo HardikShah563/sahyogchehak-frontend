@@ -20,7 +20,6 @@ export default function ContactUs() {
                             <div className="sub-div-info">
                                 <li>Contact :<a href="tel:+918419908564">+918419908564</a></li>
                                 <li>Email :<a href="mailto:sahyogchehak@gmail.com">sahyogchehak@gmail.com</a></li>
-                                
                             </div>
                         </div>
 
@@ -38,7 +37,8 @@ export default function ContactUs() {
                     
                     <div className="contact-div">
                         <form className="form" action="?" method="post">
-                            <h1>Email Us: </h1>
+                            <h1 className="sub-title">GET IN TOUCH </h1>
+                            
                             <div className="input-div">
                                 <p className="input-label">Enter your Name</p>
                                 <input
