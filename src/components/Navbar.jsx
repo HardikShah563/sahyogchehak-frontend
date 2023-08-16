@@ -5,9 +5,9 @@ import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import navLinks from "../data/navbar";
 
-export default function Navbar() {
+export default function Navbar(props) {
     // setting admin state
-    let [admin, setAdmin] = React.useState(true);
+    let [admin, setAdmin] = React.useState(props.admin);
 
     const navigate = useNavigate();
     let iterate = 0;
@@ -29,10 +29,9 @@ export default function Navbar() {
                                 <div className="dropdown-content">
                                     <div onClick={() => navigate("/vision-and-mission")}>Our Values and Mission</div>
                                     <div onClick={() => navigate("/values")}>Our Values</div>
-                                    <div onClick={() => navigate("/our-trestees")}>Our Trustees</div>
+                                    <div onClick={() => navigate("/team")}>Our Team</div>
                                     <div onClick={() => navigate("/how-we-began")}>How we began</div>
                                     <div onClick={() => navigate("/photo-gallery")}>Photo Gallery</div>
-                                    <div onClick={() => navigate("/our-team")}>Our Team</div>
                                     <div onClick={() => navigate("/our-partners-and-supporters")}>Our Partners and Supporters</div>
                                     <div onClick={() => navigate("/stories-of-change")}>Stories of Change</div>
                                     {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
@@ -55,11 +54,9 @@ export default function Navbar() {
 
                             <div className="dropdown">
                                 <li>
-                                    <p href="#main">Reports</p>
+                                    <div onClick={() => navigate("/finances")}>Finances</div>
                                 </li>
                                 <div className="dropdown-content">
-                                    <div onClick={() => navigate("/reports")}>Annual Reports</div>
-                                    <div onClick={() => navigate("/financials")}>Financials</div>
                                     {admin ? <div className="add-item" onClick={() => navigate("/add-element")}>+ Add Item</div> : ""}
                                 </div>
                             </div>
@@ -107,12 +104,6 @@ export default function Navbar() {
                                 Login
                             </div>
                         </li>
-                        {/* {admin ? 
-                        <li className="nav-button" onClick={() => navigate("/admin-dashboard")}>
-                            <div>
-                                Admin Dashboard
-                            </div>
-                        </li> : ""} */}
 
                     </div>
                     <div className="nav-lines" onClick={showNavBar}>

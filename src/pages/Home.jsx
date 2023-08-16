@@ -3,15 +3,16 @@ import Footer from "../components/Footer";
 import ContactUs from "../components/ContactUs";
 import "../style/home.css";
 
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { donate, volunteer, partner } from "../res";
 
 export default function Home() {
     const navigate = useNavigate();
-
+    const [admin, setAdmin] = useState(true);
     return (
         <>
-            <Navbar />
+            <Navbar admin = {admin}/>
 
             <div className="section carousel">
                 <h1 className="title txt-ctr">CAROUSEL SECTION</h1>
