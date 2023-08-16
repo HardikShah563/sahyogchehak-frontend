@@ -5,9 +5,9 @@ import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import navLinks from "../data/navbar";
 
-export default function Navbar(props) {
+export default function Navbar() {
     // setting admin state
-    let [admin, setAdmin] = React.useState(props.admin);
+    let [admin, setAdmin] = React.useState(true);
 
     const navigate = useNavigate();
     let iterate = 0;

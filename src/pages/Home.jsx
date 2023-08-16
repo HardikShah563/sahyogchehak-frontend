@@ -9,10 +9,9 @@ import { donate, volunteer, partner } from "../res";
 
 export default function Home() {
     const navigate = useNavigate();
-    const [admin, setAdmin] = useState(true);
     return (
         <>
-            <Navbar admin = {admin}/>
+            <Navbar />
 
             <div className="section carousel">
                 <h1 className="title txt-ctr">CAROUSEL SECTION</h1>
