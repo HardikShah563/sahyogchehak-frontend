@@ -64,7 +64,7 @@ export default function ContactUs() {
                             <div className="input-div">
                                 <p className="input-label">Leave a message</p>
                                 <textarea
-                                    className="input"
+                                    className="input textarea"
                                 ></textarea>
                             </div>
 

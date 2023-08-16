@@ -8,6 +8,8 @@ import insta from "./icon-insta.png";
 import twitter from "./icon-twitter.png";
 import sahyogLogoSmall from "./logo-sahyog-small.png";
 import sahyogLogo from "./logo-sahyog.png";
+import google from "./google.png";
+import fb from "./facebook.png";
 
 export {
     donate, 
@@ -20,4 +22,6 @@ export {
     twitter, 
     sahyogLogoSmall, 
     sahyogLogo, 
+    google, 
+    fb, 
 };
