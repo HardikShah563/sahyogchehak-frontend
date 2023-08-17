@@ -37,7 +37,7 @@ export default function ContactUs() {
                     
                     <div className="contact-div">
                         <form className="form" action="?" method="post">
-                            <h1 className="sub-title">GET IN TOUCH </h1>
+                            <h1 className="sub-title">Get In Touch</h1>
                             
                             <div className="input-div">
                                 <p className="input-label">Enter your Name</p>

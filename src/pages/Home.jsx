@@ -21,7 +21,7 @@ export default function Home() {
                 {/* <h1 className="txt-ctr">Home Page</h1> */}
                 <div className="section">
                     <h1 className="title txt-ctr">
-                        OUR AREAS OF WORK
+                        Our Areas Of Work
                     </h1>
 
                     <div className="areas-of-work flex">
@@ -101,7 +101,7 @@ export default function Home() {
 
                 <div className="section">
                     <h1 className="title txt-ctr">
-                        JOIN US
+                        Join Us
                     </h1>
 
                     <div className="join-us flex">

@@ -15,6 +15,7 @@
 .nav {
     position: sticky;
     top: 10px;
+    z-index: 50;
 }
 
 nav {
