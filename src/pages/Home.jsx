@@ -5,7 +5,7 @@ import "../style/home.css";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { donate, volunteer, partner } from "../res";
+import { donate, volunteer, partner, rightArr } from "../res";
 
 export default function Home() {
     const navigate = useNavigate();
@@ -40,9 +40,12 @@ export default function Home() {
                                 </p>
                                 
                                 <div 
-                                    className="learn-more"
+                                    className="learn-more flex"
                                     onClick={() => {navigate("")}}
-                                >Learn More</div>
+                                >
+                                    Learn More
+                                    <img className="rightArr" src={rightArr} alt="right arrow" />
+                                </div>
                             </div>
                         </div>
 
@@ -60,9 +63,12 @@ export default function Home() {
                                 </p>
                                 
                                 <div 
-                                    className="learn-more"
+                                    className="learn-more flex"
                                     onClick={() => {navigate("")}}
-                                >Learn More</div>
+                                >
+                                    Learn More
+                                    <img className="rightArr" src={rightArr} alt="right arrow" />
+                                </div>
                             </div>
                         </div>
 
@@ -80,9 +86,12 @@ export default function Home() {
                                 </p>
                                 
                                 <div 
-                                    className="learn-more"
+                                    className="learn-more flex"
                                     onClick={() => {navigate("")}}
-                                >Learn More</div>
+                                >
+                                    Learn More
+                                    <img className="rightArr" src={rightArr} alt="right arrow" />
+                                </div>
                             </div>
                         </div>
                     </div>

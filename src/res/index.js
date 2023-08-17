@@ -11,6 +11,7 @@ import sahyogLogo from "./logo-sahyog.png";
 import google from "./google.png";
 import fb from "./facebook.png";
 import visionMission from "./vision-mission.png";
+import rightArr from "./right-arrow.png";
 
 export {
     donate, 
@@ -26,4 +27,5 @@ export {
     google, 
     fb, 
     visionMission, 
+    rightArr, 
 };
