@@ -1,0 +1,19 @@
+.vision-mission {
+    width: 95vw;
+    margin: 50px auto;
+}
+
+.vision-img {
+    margin: 50px auto;
+}
+
+.vision-flex {
+    justify-content: space-evenly;
+}
+
+.vision-mission .paragraph {
+    padding: 15px 20px;
+    font-size: 20px;
+    margin: auto auto;
+    width: 40vw;
+}

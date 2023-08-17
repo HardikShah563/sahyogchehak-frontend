@@ -10,6 +10,7 @@ import sahyogLogoSmall from "./logo-sahyog-small.png";
 import sahyogLogo from "./logo-sahyog.png";
 import google from "./google.png";
 import fb from "./facebook.png";
+import visionMission from "./vision-mission.png";
 
 export {
     donate, 
@@ -24,4 +25,5 @@ export {
     sahyogLogo, 
     google, 
     fb, 
+    visionMission, 
 };
